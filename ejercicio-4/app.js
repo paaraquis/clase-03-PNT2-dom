@@ -1,0 +1,31 @@
+const personajesSimpsons = [
+{ nombre: "Homero", edad: 39, rol: "Padre" },
+{ nombre: "Marge", edad: 36, rol: "Madre" },
+{ nombre: "Bart", edad: 10, rol: "Hijo" },
+{ nombre: "Lisa", edad: 8, rol: "Hija" },
+{ nombre: "Maggie", edad: 1, rol: "Hija" },
+{ nombre: "Ned", edad: 35, rol: "Vecino" },
+{ nombre: "Ralph", edad: 8, rol: "Compañero de clase" },
+{ nombre: "Milhouse", edad: 10, rol: "Amigo" },
+{ nombre: "Nelson", edad: 12, rol: "Bravucón" },
+{ nombre: "Martin", edad: 10, rol: "Compañero de clase" }
+];
+
+const listaPersonajes = document.querySelector('#personajes');
+
+personajesSimpsons.forEach(function (personaje) {
+  const li = document.createElement('li');
+  li.textContent = personaje.nombre;
+  listaPersonajes.appendChild(li);
+});
+
+/*
+personajesSimpsons.forEach(personaje => { 
+  // Crear un elemento <li> para cada personaje
+  const li = document.createElement('li');
+  // Asignar el nombre del personaje al contenido del <li>
+  li.textContent = personaje.nombre;
+  // Agregar el <li> a la lista de personajes en el DOM
+  listaPersonajes.appendChild(li);
+});
+//:prof*/
